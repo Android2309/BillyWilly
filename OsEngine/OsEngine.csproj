@@ -965,6 +965,7 @@
       <DependentUpon>TestBotConnectionParams.xaml</DependentUpon>
     </Compile>
     <Compile Include="Robots\AutoTestBots\TestBotOpenAndCanselOrders.cs" />
+    <Compile Include="Robots\BillyWilly\BillyWillyBot.cs" />
     <Compile Include="Robots\BotCreateUi2.xaml.cs">
       <DependentUpon>BotCreateUi2.xaml</DependentUpon>
     </Compile>
