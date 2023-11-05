@@ -23,6 +23,7 @@ using OsEngine.Robots.Patterns;
 using OsEngine.Robots.Trend;
 using OsEngine.Robots.OnScriptIndicators;
 using OsEngine.Robots.Screeners;
+using OsEngine.Robots.BillyWilly;
 
 namespace OsEngine.Robots
 {
@@ -36,6 +37,7 @@ namespace OsEngine.Robots
         public static List<string> GetNamesStrategy()
         {
             List<string> result = new List<string>();
+            result.Add("BillyWillyBot");
             result.Add("SmaScreener");
             result.Add("Fisher");
             result.Add("Engine");
@@ -113,6 +115,11 @@ namespace OsEngine.Robots
             {
                 bot = CreateScriptStrategyByName(nameClass, name, startProgram);
                 return bot;
+            }
+
+            if (nameClass == "BillyWillyBot")
+            {
+                bot = new BillyWillyBot(name, startProgram);
             }
 
             if (nameClass == "SmaScreener")
